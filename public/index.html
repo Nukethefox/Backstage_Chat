@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Backstage Chat</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="login">
+  <input id="usernameInput" placeholder="Username (recommended all caps)">
+  <button id="loginBtn">CHANGE (Please refresh this page)</button>
+</div>
+
+<div>
+  <div id="connectionStatus" style="margin: 10px;">✅ You are connected</div>
+  <button id="changeNameBtn" class="ChangeNameButton">Change username</button>
+</div>
+
+
+<div id="chatContainer">
+  <div id="messages"></div>
+  <div id="form">
+    <input id="input" placeholder="Write here...">
+    <button id="sendBtn">Enviar</button>
+  </div>
+  <select id="quickMessages" class="quickmessageselect">
+    <option value="">— Message presets —</option>
+    <option value="Received">Received</option>
+    <option value="Ready here">Ready here</option>
+    <option value="The last instruction is confusing">The last instruction is confusing</option>
+    <option value="This is a connection test message, please someone acknowledge">This is a connection test message, please someone acknowledge</option>
+  </select>
+
+  <p style="padding: 5px; margin-top: 6px; margin-bottom: 6px; margin-left: 6px; font-size: 15px;">Suggestions: <b>Prevent the screen from turning off by itself</b> (deactivate screen sleep timer) (<b>BUT MIND THE BATERY!</b>). <b>New messages will blink</b>.</p>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="gui.js"></script>
+
+</body>
+</html>
